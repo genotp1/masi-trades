@@ -1,0 +1,251 @@
+<%- include('partials/dashboardHeader')%>
+
+<div class="welcome-container">
+    <h4 class="text-light">welcome to your Personal Dashboard <%=user.fullname%></h4>
+    <div class="welcome-container-body">
+        <div class="dashboard">
+            <p class="text-light">Dashboard/</p>
+        </div>
+        <div class="home">
+            <p class="text-light">Home</p>
+        </div>
+    </div>
+</div>
+
+<!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+    <div class="tradingview-widget-container__widget"></div>
+    <div class="tradingview-widget-copyright"></div>
+    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+    {
+    "symbols": [
+      {
+        "proName": "FOREXCOM:SPXUSD",
+        "title": "S&P 500"
+      },
+      {
+        "proName": "FOREXCOM:NSXUSD",
+        "title": "US 100"
+      },
+      {
+        "proName": "FX_IDC:EURUSD",
+        "title": "EUR/USD"
+      },
+      {
+        "proName": "BITSTAMP:BTCUSD",
+        "title": "Bitcoin"
+      },
+      {
+        "proName": "BITSTAMP:ETHUSD",
+        "title": "Ethereum"
+      }
+    ],
+    "showSymbolLogo": true,
+    "colorTheme": "dark",
+    "isTransparent": false,
+    "displayMode": "adaptive",
+    "locale": "en"
+  }
+    </script>
+  </div>
+  <!-- TradingView Widget END -->
+
+  <div class="record-container">
+    <div class="record-container-boxes">
+        
+          <div class="bonus-box">
+        <div class="bonus-box-text">
+            <h5><%=user.available%></h5>
+            <strong>Available Balance</strong>
+        </div>
+        <div class="bonus-box-image">
+            <i class="bi bi-wallet"></i>
+        </div>
+    </div>
+
+        <div class="deposit-box">
+            <div class="deposit-box-text">
+                <h3><%=user.balance%></h3>
+            <strong>Amount Deposited</strong>
+            </div>
+            <div class="deposit-box-image">
+                <i class="bi bi-wallet"></i>
+            </div>
+        </div>
+
+        <div class="widthdraw-box">
+            <div class="widthdraw-box-text">
+                <h3><%=user.widthdrawBalance%></h3>
+                <strong>Amount Widthdrawn</strong>
+            </div>
+            <div class="deposit-box-image">
+                <i class="bi bi-wallet"></i>
+            </div>
+        </div>
+
+        <div class="bonus-box">
+            <div class="bonus-box-text">
+                <h3><%=user.bonus%></h3>
+                <strong>Bonus Received</strong>
+            </div>
+            <div class="bonus-box-image">
+                <i class="bi bi-wallet"></i>
+            </div>
+        </div>
+    </div>
+  </div>
+
+    <!-- TradingView Widget BEGIN -->
+<!-- TradingView Widget BEGIN -->
+<div class="first-chart">
+<div class="tradingview-widget-container">
+  <div id="tradingview_b6a60"></div>
+  <div class="tradingview-widget-copyright"></div>
+  <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+  <script type="text/javascript">
+  new TradingView.widget(
+  {
+  "autosize": true,
+  "symbol": "BINANCE:BTCUSDT",
+  "interval": "D",
+  "timezone": "Etc/UTC",
+  "theme": "dark",
+  "style": "1",
+  "locale": "en",
+  "toolbar_bg": "#f1f3f6",
+  "enable_publishing": false,
+  "withdateranges": true,
+  "hide_side_toolbar": false,
+  "allow_symbol_change": true,
+  "details": true,
+  "hotlist": true,
+  "calendar": true,
+  "studies": [
+    "STD;Average%Day%Range"
+  ],
+  "container_id": "tradingview_b6a60"
+}
+  );
+  </script>
+</div>
+</div>
+<!-- TradingView Widget END -->
+
+<!-- TradingView Widget BEGIN -->
+<div class="second-chart">
+<div class="tradingview-widget-container">
+  <div class="tradingview-widget-container-widget"></div>
+  <div class="tradingview-widget-copyright"></div>
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-forex-heat-map.js" async>
+  {
+  "width": "770",
+  "height": "500",
+  "currencies": [
+    "EUR",
+    "USD",
+    "JPY",
+    "GBP",
+    "CHF",
+    "AUD",
+    "CAD",
+    "NZD",
+    "CNY"
+  ],
+  "isTransparent": false,
+  "colorTheme": "dark",
+  "locale": "en"
+}
+  </script>
+</div>
+</div>
+<!-- TradingView Widget END -->
+<div class="mgm" style="opacity: 1;">
+    <div class="txt" style="color:black;">Someone from <b>Cyprus</b> just earned  <a href="javascript:void(0);" onclick="javascript:void(0);">$5,000 .</a></div>
+    </div>
+
+<style>
+.mgm {
+    border-radius: 7px;
+    position: fixed;
+    z-index: 90;
+    bottom: 80px;
+    right: 50px;
+    background: #fff;
+    padding: 10px 27px;
+    box-shadow: 0px 5px 13px 0px rgba(0,0,0,.3);
+}
+.mgm a {
+    font-weight: 700;
+    display: block;
+    color:#f2d516;
+}
+.mgm a, .mgm a:active {
+    transition: all .2s ease;
+    color:#f2d516;
+}
+</style>
+
+<script type="text/javascript">
+    var listCountries = ['South Africa', 'USA', 'Germany', 'France', 'Italy', 'South Africa', 'Australia', 'South Africa', 'Canada', 'Argentina', 'Saudi Arabia', 'Mexico', 'South Africa', 'South Africa', 'Venezuela', 'South Africa', 'Sweden', 'South Africa', 'South Africa', 'Italy', 'South Africa', 'United Kingdom', 'South Africa', 'Greece', 'Cuba', 'South Africa', 'Portugal', 'Austria', 'South Africa', 'Panama', 'South Africa', 'South Africa', 'Netherlands', 'Switzerland', 'Belgium', 'Israel', 'Cyprus'];
+        var listPlans = ['$500','$1500','$1000','$10,000','$2000','$3000','$4000', '$600', '$700', '$2500'];
+        interval = Math.floor(Math.random() * (40000 - 8000 + 1) + 8000);
+        var run = setInterval(request, interval);
+    
+        function request() {
+            clearInterval(run);
+            interval = Math.floor(Math.random() * (40000 - 8000 + 1) + 8000);
+            var country = listCountries[Math.floor(Math.random() * listCountries.length)];
+            var plan = listPlans[Math.floor(Math.random() * listPlans.length)];
+            var msg = 'Someone from <b>' + country + '</b> just traded with <a href="javascript:void(0);" onclick="javascript:void(0);">' + plan + ' .</a>';
+            $(".mgm .txt").html(msg);
+            $(".mgm").stop(true).fadeIn(300);
+            window.setTimeout(function() {
+                $(".mgm").stop(true).fadeOut(300);
+            }, 6000);
+            run = setInterval(request, interval);
+        }
+    </script>
+
+
+<script>
+    var listCountries = ['Argentina', 'USA', 'Germany', 'France', 'Italy', 'South Korea', 'Australia', 'Norway', 'Canada', 'Argentina', 'Saudi Arabia', 'Mexico', 'Spain', 'Austria', 'Venezuela', 'South Africa', 'Sweden', 'South Korea', 'China', 'Italy', 'Germany', 'United Kingdom', 'Bahrain', 'Greece', 'Cuba', 'Bulgaria', 'Portugal', 'Austria', 'Cyprus', 'Panama', 'Asia', 'Norway', 'Netherlands', 'Switzerland', 'Belgium', 'Israel', 'Cyprus','Spain','Norway'];
+      var listPlans = ['$50,000','$15,000','$10,000','$10,0000','$20,000','$30,000','$40,000', '$60,000', '$7,000', '$25,000', '$35,000', '$5,000','$7,000','45,000','$3,500','$5,000','$12,500','$9,500','$1,140,000', '$600,000', '$750,000', '$256,000', '$935,000', '$558,000','$1,227,000','2,775,000','$1,173,500','$1,000,000','$1,452,500','$995,500'];
+      interval = Math.floor(Math.random() * (40000 - 8000 + 1) + 8000);
+      var run = setInterval(request, interval);
+  
+      function request() {
+          clearInterval(run);
+          interval = Math.floor(Math.random() * (40000 - 8000 + 1) + 8000);
+          var country = listCountries[Math.floor(Math.random() * listCountries.length)];
+          var plan = listPlans[Math.floor(Math.random() * listPlans.length)];
+          var msg = 'Someone from <b>' + country + '</b> just earned  <a href="javascript:void(0);" onclick="javascript:void(0);">' + plan + ' .</a>';
+          $(".mgm .txt").html(msg);
+          $(".mgm").stop(true).fadeIn(300);
+          window.setTimeout(function() {
+              $(".mgm").stop(true).fadeOut(300);
+          }, 6000);
+          run = setInterval(request, interval);
+      }
+  </script>
+<div class="third-container">
+  <!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+  <div class="tradingview-widget-container__widget"></div>
+  <div class="tradingview-widget-copyright"></div>
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-timeline.js" async>
+  {
+  "feedMode": "all_symbols",
+  "colorTheme": "dark",
+  "isTransparent": false,
+  "displayMode": "regular",
+  "width": 1200,
+  "height": 830,
+  "locale": "en"
+}
+  </script>
+</div>
+<!-- TradingView Widget END -->
+</div>
+
+
+<%- include('partials/dashboardFooter')%>

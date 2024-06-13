@@ -1,0 +1,131 @@
+
+<%- include('partials/header')%>
+<div class="d-flex justify-content-evenly flex-wrap flex-md nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+    <h1 class="h2"><%=user.fullname %></h1>
+    <div class="btn-toolbar mb-2 mb-md 0">
+      <div class="btn-group me-2">
+        <button type="button" class="btn btn-sm btn-outline-secondary">Share</button>
+        <button type="button" class="btn btn-sm btn-outline-secondary">Export</button>
+      </div>
+    </div>
+  
+    </div>
+
+    <div class="col py-3">
+
+        <div class="row">
+          <div class="col">
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/adminRoute">Dashboard</a></li>
+                <li class="breadcrumb-item active"><%= user.fullname %></li>
+              </ol>
+            </nav>
+          </div>
+          <div class="col text-end fw-lighter">
+            <b>Last Updated</b>
+            <b>UserId:</b> <%= user._id %>
+          </div>
+        </div>
+      
+      </div>
+      
+      <ul class="list-group">
+      
+        <li class="list-group-item"> 
+          <div class="row">
+            <div class="col" style="max-width: 140px"> <b>Name:</b></div>
+            <div class="col"><%= user.fullname %> </div>
+          </div>
+        </li>
+      
+        <li class="list-group-item"> 
+          <div class="row">
+            <div class="col" style="max-width: 140px"> <b>Tel:</b></div>
+            <div class="col"><%= user.tel %></div>
+          </div>
+        </li>
+      
+        <li class="list-group-item"> 
+          <div class="row">
+            <div class="col" style="max-width: 140px"> <b>Email:</b></div>
+            <div class="col"><%= user.email %></div>
+          </div>
+        </li>
+           <li class="list-group-item"> 
+          <div class="row">
+            <div class="col" style="max-width: 140px"> <b>Gender:</b></div>
+            <div class="col"><%= user.gender %></div>
+          </div>
+        </li>   <li class="list-group-item"> 
+          <div class="row">
+            <div class="col" style="max-width: 140px"> <b>Country:</b></div>
+            <div class="col"><%= user.country %></div>
+          </div>
+        </li>
+        
+         <li class="list-group-item"> 
+          <div class="row">
+            <div class="col" style="max-width: 140px"> <b>Password:</b></div>
+            <div class="col"><%= user.password %></div>
+          </div>
+        </li>
+
+        <li class="list-group-item"> 
+          <div class="row">
+            <div class="col" style="max-width: 140px"> <b>Deposit Balance:</b></div>
+            <div class="col"><%= user.balance %></div>
+          </div>
+        </li>
+      
+        <li class="list-group-item"> 
+          <div class="row">
+            <div class="col" style="max-width: 140px"> <b>Widthdraw Balance:</b></div>
+            <div class="col"><%= user.widthdrawBalance %></div>
+          </div>
+        </li>
+
+        <li class="list-group-item"> 
+          <div class="row">
+            <div class="col" style="max-width: 140px"> <b>Available Balance:</b></div>
+            <div class="col"><%= user.available %></div>
+          </div>
+        </li>
+
+        <li class="list-group-item"> 
+          <div class="row">
+            <div class="col" style="max-width: 140px"> <b>Bonus:</b></div>
+            <div class="col"><%= user.bonus %></div>
+          </div>
+        </li>
+
+        <li class="list-group-item"> 
+          <div class="row">
+            <div class="col" style="max-width: 140px "> <b>Deposits iD's:</b></div>
+            <div class="col"><b><%= user.deposits %></b></div>
+          </div>
+        </li>
+
+        <li class="list-group-item"> 
+          <div class="row">
+            <div class="col" style="max-width: 140px"> <b>Widthdraws ID's:</b></div>
+            <div class="col"><%= user.widthdraws %></div>
+          </div>
+        </li>
+
+        <li class="list-group-item"> 
+          <div class="row">
+            <div class="col" style="max-width: 140px"> <b>Date Created:</b></div>
+            <div class="col"><%= user.createdAt %></div>
+          </div>
+        </li>
+      
+        <li class="list-group-item"> 
+          <div class="row">
+            <div class="col" style="max-width: 140px"> <b>Date Modified:</b></div>
+            <div class="col"><%= user.updatedAt %></div>
+          </div>
+        </li>
+      
+      </ul>
+<%- include('partials/footer')%>

@@ -1,0 +1,91 @@
+
+
+<%- include('partials/header')%>
+<div class="d-flex justify-content-evenly flex-wrap flex-md nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+    <h1 class="h2"></h1>
+    <div class="btn-toolbar mb-2 mb-md 0">
+      <div class="btn-group me-2">
+        <button type="button" class="btn btn-sm btn-outline-secondary">Share</button>
+        <button type="button" class="btn btn-sm btn-outline-secondary">Export</button>
+      </div>
+    </div>
+  
+    </div>
+
+
+<div class="col py-3">
+
+    <div class="row">
+      <div class="col">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/allWidthdrawals">Widthdrawals</a></li>
+            <li class="breadcrumb-item active"></li>
+          </ol>
+        </nav>
+      </div>
+      <div class="col text-end fw-lighter">
+        <b>Last Updated</b>
+        <b>UserId:</b> <%= deposit._id %>
+      </div>
+    </div>
+  
+  </div>
+  
+  <ul class="list-group">
+  
+    <li class="list-group-item"> 
+      <div class="row">
+        <div class="col" style="max-width: 140px"> <b>Wallet Address:</b></div>
+        <div class="col"><%=  deposit.wallet %> </div>
+      </div>
+    </li>
+  
+    <li class="list-group-item"> 
+      <div class="row">
+        <div class="col" style="max-width: 140px"> <b>Amount:</b></div>
+        <div class="col"><%=  deposit.amount %></div>
+      </div>
+    </li>
+
+    <li class="list-group-item"> 
+      <div class="row">
+        <div class="col" style="max-width: 140px"> <b>Photo:</b></div>
+        <div class="col"><%=  deposit.photo %></div>
+      </div>
+    </li>
+  
+    <li class="list-group-item"> 
+      <div class="row">
+        <div class="col" style="max-width: 140px"> <b>Deposit Status:</b></div>
+        <div class="col"><%=  deposit.status %></div>
+      </div>
+    </li>
+    
+    
+    <li class="list-group-item"> 
+      <div class="row">
+        <div class="col" style="max-width: 140px" > <b>Deposit owner:</b></div>
+        <div class="col"><b  style="display: flex; flex-direction: column; flex-wrap: wrap;"><%=  deposit.owner %></b></div>                          <!-- [user.name]  -->
+      </div>
+    </li>
+
+    <li class="list-group-item"> 
+      <div class="row">
+        <div class="col" style="max-width: 140px"> <b>Date Created:</b></div>
+        <div class="col"><%=  deposit.createdAt %></div>
+      </div>
+    </li>
+  
+    <li class="list-group-item"> 
+      <div class="row">
+        <div class="col" style="max-width: 140px"> <b>Date Modified:</b></div>
+        <div class="col"><%= deposit.updatedAt %></div>
+      </div>
+    </li>
+  
+  </ul>
+
+
+
+<%- include('partials/footer')%>

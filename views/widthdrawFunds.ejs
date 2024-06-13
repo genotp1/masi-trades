@@ -1,0 +1,27 @@
+
+<%- include('partials/dashboardHeader')%>
+
+<div class="widthdraw-container">
+    <div class="widthdraw-container-form">
+        <div class="widthdraw-container-form-header">
+            <h3 class="text-light">Make a Widthdrawal</h3>
+            <p style="color: blueviolet;">Looking to buy Bitcoin using your Credit/Debit Card? Use our Step-by-Step Guide<a href="/buyCrypto" class="text-danger text-decoration-none">Buy/Sell CryptoCurrency</a></p>
+        </div>
+        <form action="/widthdraw/<%=user._id%>" method="POST">
+            <div class="mb-3">
+              <label for="wallet" class="form-label"></label>
+              <input type="text" class="form-control" id="wallet" aria-describedby="emailHelp" name="wallet" required>
+              <div id="emailHelp" class="form-text text-light">Verify Address very well before making widthdrawals.</div>
+            </div>
+            <div class="mb-3">
+              <label for="amount" class="form-label " style="color: blueviolet;">Amount in Dollars ($)</label>
+              <input type="text" class="form-control"  aria-describedby="emailHelp" id="amount" name="amount" required value="<%=user.widthdrawBalance%>">
+              <div id="emailHelp" class="form-text text-light">Your Available Balance for withdthdrawal is <spann class="text-light"></span></div>
+            </div>
+            <button type="submit" class="btn btn-dark">Submit</button>
+          </form>
+    </div>
+
+</div>
+
+<%- include('partials/dashboardFooter')%>

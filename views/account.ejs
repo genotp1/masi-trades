@@ -1,0 +1,41 @@
+<%- include('partials/dashboardHeader')%>
+
+<div class="account-container">
+    
+    <div class="image-container">
+        <img src="IMG/profile.png" alt="">
+        
+        <div class="image-container-bio">
+            <h5 style="color: red;"><%=user.fullname%></h5>
+            <strong style="color: blueviolet;">Bio</strong>
+            <p class="text-light">Hi, my name is <%=user.fullname %> , below are the information i supplied during my BASI-TRADES Registration.</p>
+        </div>
+
+        <div class="below-container">
+            <div class="date">
+                <h5 class="text-danger">Date Joined BASI-TRADES</h5>
+                <p><%=user.createdAt %></p>
+            </div>
+            <div class="details">
+                <p class="text-danger">Fullname:<b class="text-light"><%=user.fullname %></b></p>
+                <p class="text-danger">profileId:<b class="text-light"><%=user._id %></b></p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="contact-container">
+        <div class="contact-container-header">
+            <h5 style="color: blueviolet;">contact</h5>
+            <p class="text-danger">Mobile:<b class="text-light"><%=user.tel %></b></p>
+            <p class="text-danger">Email:<b class="text-light"><%=user.email %></b></p>
+            <p class="text-danger">Country:<b class="text-light"><%=user.country %></b></p>
+            <p class="text-danger">Gender:<b class="text-light"><%=user.gender %></b></p>
+        </div>
+    </div>
+
+
+
+</div>
+
+<%- include('partials/dashboardFooter')%>

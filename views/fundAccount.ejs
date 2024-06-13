@@ -1,0 +1,114 @@
+<%- include('partials/dashboardHeader')%>
+
+
+
+
+
+<div class="deposit-container">     
+  <div class="deposit-container-form-content">
+
+
+<div class="accordion" id="accordionExample" >
+
+
+
+  <div class="accordion-item">
+    <h2 class="accordion-header mb-0">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+       Click here to make use of Payment Methods Available now
+      </button>
+    </h2>
+    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <div class="card">
+          <div class="card-header py-0" id="headingOne">
+            <h5 class="mb-0">
+              <button class="btn btn-link text-decoration-none" type="button"  data-bs-toggle="collapse" data-target="#bitcoin-payment-method" aria-expanded="true" aria-controls="bitcoin-payment-method">
+                Bitcoin payment method
+              </button>
+            </h5>
+        <div class="card-body text-center">
+
+          <div class="input-group mb-1">
+            <label for="wallet">Bitcoin</label>
+            <input type="text" class="form-control" name="wallet" id="wallet" value="bc1qnzcl00umpzsmjl9h357qnkye9s0s0dj50u50k6" >
+            <div class="input-group-append">
+              <button class="btn btn-outline-secondary" type="button">Copy</button>
+            </div>
+    
+          </div>
+          <div class="input-group mt-10">
+            <label for="wallet">USDT</label>
+            <input type="text" class="form-control" name="wallet"  id="wallet" value="4Pzu9d4M6frZsnH86ZhEdzVz1wgbwmvgh46BBtoDfENm" >
+            <div class="input-group-append">
+              <button class="btn btn-outline-secondary" type="button">Copy</button>
+            </div>
+    
+          </div>
+          <img src="IMG/bitcoin.png" width="400px" class="img">
+          
+          <img src="IMG/usdt.png" width="400px" class="img">
+          </div>
+
+      </div>
+    </div>
+  </div>
+
+    </div>
+  <!-- card  -->
+  </div>
+
+</div>
+
+<div class="col-md-6 h-100 ">
+  <div class="card">
+    <div class="card-body">
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <h5>Submit Notification for Deposit</h5>
+        </div>
+        <div class="col-md-12 mt-2">
+          <form class="form" action="/deposit/<%=user._id%>" method="post" enctype="multipart/form-data">
+                  <div class="form-row">
+              <div class="form-group col-md-12">
+                <strong class="text-primary d-flex  align-items-center">
+                  <i>
+                    To deposit, please choose the payment method at the Payment Methods Section and make the payment.
+                  </i>
+                </strong>
+                <strong class="text-primary d-block mt-1">
+                  <i>
+                    After completing the payment come back here and fill the deposit notification form.
+                  </i>
+                </strong>
+              </div>
+
+              <div class="form-group col-md-12 my-2">
+                <label for="amount">Amount in Dollars ($)</label>
+                <input type="number" name="amount" class="form-control" value="" placeholder="Enter Amount" step="0.01" required="">
+              </div>
+              <div class="form-group col-md-12 my-2">
+                <label for="image">Upload Payment Receipt</label>
+                <input type="file" name="image" class="form-control" placeholder="Enter Amount" required="" accept="image/">
+              </div>
+              <div class="form-group col-md-12 my-2">
+                <div class="row">
+                  <button type="submit" name="deposit" class="btn btn-primary col-md-12">Notify for Deposit</button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- /.card-body -->
+  </div>
+  <!-- /.card -->
+</div>
+
+</div>
+</div>
+
+
+
+<%- include('partials/dashboardFooter')%>
